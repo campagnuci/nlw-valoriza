@@ -4,6 +4,7 @@ import "express-async-errors"
 
 import "./database"
 import { router } from './routes'
+import env from './config/env'
 
 const app = express()
 app.use(express.json())
@@ -18,4 +19,4 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   })
 })
 
-app.listen(3000, () => console.log("Server is running"))
+app.listen(env.port, () => console.log("Server is running"))
