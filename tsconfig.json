@@ -8,6 +8,9 @@
     "esModuleInterop": true,
     "sourceMap": true,
     "rootDir": "src",
+    "typeRoots": [
+      "./src/@types"
+    ],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,

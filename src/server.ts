@@ -1,12 +1,14 @@
 import "reflect-metadata"
 import express, { Request, Response, NextFunction, response } from "express"
 import "express-async-errors"
+import cors from 'cors'
 
 import "./database"
 import { router } from './routes'
 import env from './config/env'
 
 const app = express()
+app.use(cors())
 app.use(express.json())
 app.use(router)
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
